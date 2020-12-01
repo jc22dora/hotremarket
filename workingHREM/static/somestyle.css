@@ -1,0 +1,38 @@
+body {
+    background-color: rgb(56, 36, 109);
+    
+}
+h1 {
+    margin:0px;
+}
+
+.header {
+    font-family: "Capsule Sans Display",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    background-color: #f1f1f1;
+    text-align: center;
+    font-size: 50px;
+    margin:1px 1px 1px 1px;
+    padding:1px;
+}
+
+.tablediv {
+    background-color: #f1f1f1;
+    display:inline-block;
+    text-align:center;
+    justify-content:center;
+    
+    
+}
+#losertable.tablediv {
+    color:red;
+    font-family: "Capsule Sans Display",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+#gainertable.tablediv {
+    color:green;
+    font-family: "Capsule Sans Display",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+
+
+.tablecontainer{
+    text-align:center;
+}
