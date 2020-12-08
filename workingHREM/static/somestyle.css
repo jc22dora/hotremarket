@@ -1,10 +1,50 @@
 body {
-    background-color: rgb(56, 36, 109);
-    
+    /*background-color: rgb(56, 36, 109);*/
+    background-image: url('backgroundimage.jpg');
+    background-size: cover;
+    background-repeat:   no-repeat;
+    background-position: center center;  
 }
 h1 {
     margin:0px;
 }
+
+/*NAVBAR*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+    position: sticky;
+    top:0;
+  }
+  
+li {
+    float: left;
+  }
+  
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+li a:hover:not(.active) {
+    background-color: #ddd;
+  }
+  
+li a.active {
+    color: white;
+    background-color: #4CAF50;
+  }
+/*end NAVBAR*/
+
+
+
 
 .header {
     font-family: "Capsule Sans Display",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
@@ -15,14 +55,47 @@ h1 {
     padding:1px;
 }
 
+table {
+    border-collapse: collapse;
+}
 .tablediv {
     background-color: #f1f1f1;
     display:inline-block;
-    text-align:center;
     justify-content:center;
-    
-    
+    border-collapse: collapse;
+    margin: 10px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
+
+.tablediv thead tr {
+    background-color: #009879;
+    color: #ffffff;
+}
+.tablediv th,
+.tablediv td {
+    padding: 12px 15px;
+}
+
+.tablediv tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.tablediv tbody tr:nth-of-type(even) {
+    /*background-color: #f3f3f3;*/
+    background-color: #c4b8b81c;
+}
+
+.tablediv tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+.tablediv tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
 #losertable.tablediv {
     color:red;
     font-family: "Capsule Sans Display",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
@@ -36,3 +109,15 @@ h1 {
 .tablecontainer{
     text-align:center;
 }
+
+
+input[type=submit] {
+    border: 1px solid #050505;
+    color: #fff;
+    background: tomato;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+input[type=submit]:hover{
+    background-color:rgb(56, 36, 109);
+    }

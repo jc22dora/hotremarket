@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+            <link rel="stylesheet" href="../static/page.css"/>
+            <title>My Webpage</title>
+        {% endblock %}
+    </head>
+    <body>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/myzip">My Zip Code</a></li>
+            <li><a href="/insights">Insights</a></li>
+            <li style="float:right"><a class="active" href="/about">About</a></li>
+          </ul>
+        <div id="content">{% block content %}{% endblock %}</div>
+
+        <div id="center" class="center">
+            <h id="centertext">Insights</h>
+        </div>
+        <div class="footer">
+            {% block footer %}
+                &copy; Copyright 2020 by JCD LLC.
+            {% endblock %}
+        </div>
+    </body>
+</html>

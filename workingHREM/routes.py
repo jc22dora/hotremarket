@@ -11,7 +11,7 @@ class Form(Form):
     submit = SubmitField('Submit')
 
 
-@app.route('/', methods=['GET','POST'])
+@app.route('/home', methods=['GET','POST'])
 def hello_world():
     form = Form()
     package = helloworld.collectTableData()
@@ -32,3 +32,19 @@ def my_zip(zip):
     rank = dbmod.getZIPRank(zip)
     rank = round(rank[1]*100)
     return render_template('chart.html',values=values, labels=labels, legend=legend, rank=rank)
+
+@app.route('/')
+def landingpage():
+    return render_template('base.html')
+
+@app.route('/insights')
+def insights():
+    return render_template('insights.html')
+
+@app.route('/myzip')
+def myzip():
+    return render_template('myzip.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')

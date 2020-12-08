@@ -13,13 +13,24 @@
 </head>
 
 <body>
+    <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/myzip">My Zip Code</a></li>
+        <li><a href="/insights">Insights</a></li>
+        <li style="float:right"><a class="active" href="/">About</a></li>
+      </ul>
     <div class="header">
         <h1>HotREMarkets</h1>
     </div>
     <div class="tablecontainer">
         <div class="tablediv" id="losertable">
             <table id="Losers">
-                <tr>Losers</tr>
+                <thead>
+                    <tr>
+                        <th colspan="4">Losers</th>
+                    </tr>
+                </thead>
+                <tbody>
                 <tr>
                     <td>{{package.losers.rowOne.zip}}</td>
                     <td>{{package.losers.rowOne.city}}</td>
@@ -80,11 +91,17 @@
                     <td>{{package.losers.rowTen.state}}</td>
                     <td>{{package.losers.rowTen.pc}}%</td>
                 </tr>
+            </tbody>
             </table>
         </div>
         <div class="tablediv" id="gainertable">
             <table id="Gainers">
-                <tr>Gainers</tr>
+                <thead>
+                    <tr>
+                        <th colspan="4">Gainers</th>
+                    </tr>
+                </thead>
+                <tbody>
                 <tr>
                     <td>{{package.gainers.rowOne.zip}}</td>
                     <td>{{package.gainers.rowOne.city}}</td>
@@ -145,6 +162,7 @@
                     <td>{{package.gainers.rowTen.state}}</td>
                     <td>{{package.gainers.rowTen.pc}}%</td>
                 </tr>
+            </tbody>
             </table>
         </div>
     </div>
@@ -155,8 +173,8 @@
         <div class = "rankformdiv">
             <form method="POST" action="">
                 <label for="zip">ZIP</label><br>
-                <input type="text" id="zipinput" name="zipinput" value="val"><br>
-                <input type="submit" value="Signup"></input>
+                <input type="text" id="zipinput" name="zipinput" placeholder="ZIP Code"><br>
+                <input type="submit" id="submitbutton" value="Submit"></input>
                 </form>
         </div>
     </div>
